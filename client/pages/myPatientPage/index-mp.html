@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Специалист-Пациенты</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.13.18/jquery.timepicker.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.13.18/jquery.timepicker.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../pages/myPatientPage/index-mp.css">
+</head>
+
+<body>
+    <div id="notification-container" style="position: fixed; top: 20px; right: 20px; z-index: 1000;"></div>
+    <div class="full-width-container d-flex justify-content-between align-items-center" id="main">
+        <div class="work-time">
+            <i class="fa-solid fa-clock icon"></i>
+            <span class="label">Режим работы:</span>
+            <span class="time">с 7:00 до 22:00</span>
+        </div>
+        <div class="adress">
+            <i class="fa-solid fa-location-dot location-icon"></i>
+            <span class="label">Адрес:</span>
+            <span class="location">Минск, ул. Уличная 12</span>
+        </div>
+    </div>
+
+    <div class="rounded-container">
+        <div class="clinic-name">Городская<br> поликлиника №16</div>
+
+        <div class="phone-numbers">
+
+
+
+            <i class="fa-solid fa-phone-volume phone-icon"></i>
+
+
+            <div>
+                <span>+375 (29) 111-11-11</span><br>
+                <span>+375 (44) 111-11-11</span>
+            </div>
+        </div>
+        <i class="fa-solid fa-user-doctor user-icon"></i>
+        <div class="session-user" id="sessionUser"></div>
+        <div class="links">
+
+            <a href="" id="myProfile">Мой профиль</a>
+
+            <div id="dropdownMenu" class="dropdown-content">
+                <a href="/api/specialist/#graf">График работы</a>
+                <a href="#pat" id="myAppointments">Пациенты</a>
+                <a href="/api/department">Отделения</a>
+                <a href="/api/specialist/#personal">Личная информация</a>
+                <a href="#" id="logoutBtn">Выйти</a>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="graf-container" id="pat">
+        <div class="button-container">
+            <button class="toggle-button" id="button1">МОИ ПАЦИЕНТЫ</button>
+            <button class="toggle-button" id="button2">ВСЕ ПАЦИЕНТЫ</button>
+            <div class="indicator"></div>
+        </div>
+        <i class="fa-solid fa-arrow-up-a-z sortl1"></i>
+        <i class="fa-solid fa-arrow-up-1-9 sortn1"></i>
+
+        <i class="fa-solid fa-arrow-up-a-z sortl2"></i>
+        <i class="fa-solid fa-arrow-up-1-9 sortn2"></i>
+
+        <div id="patientsContainer" class="patients-container">
+
+
+            <div class="record-container">
+
+                <div class="row4">
+                    <div class="activetalons-t" id="activetalons-t">Номер пациента:
+                    </div>
+                    <div class="activetalons" id="activetalons">8</div>
+                </div>
+                <div class="patient-fio" id="patientInfo">
+                    <p id="ppf">Иванов</p>
+                    <p id="ppi">Иван</p>
+                    <p id="ppo">Иванович</p>
+                </div>
+                <div class="gender" id="gender">(М)</div>
+                <div class="row1">
+                    <i class="fa-solid fa-cake-candles dr-icon"></i>
+                    <div class="datebirth" id="datebirth">21.11.2024</div>
+                    <div class="age" id="age">(10 лет) </div>
+                </div>
+                <div class="row2">
+                    <i class="fa-solid fa-phone p-phone-icon"></i>
+                    <div class="phonenumber" id="phonenumber">+375(29)6070447</div>
+                </div>
+                <div class="row3">
+                    <i class="fa-solid fa-house home-icon"></i>
+                    <div class="homeadress" id="homeadress">Высоцкого 33, 4</div>
+                </div>
+                <button class="button3" id="button3">Оформить запись</button>
+
+                <a href="#" class="checka" id="checka">-></a>
+
+            </div>
+
+
+        </div>
+        <div class="modal" style="display: none;">
+            <div class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <h2>Оформление талона</h2>
+
+                <p><strong>Пациент:</strong>
+                    <span class="pac" id="patientFullName">ФИО пациента</span>
+                </p>
+                <p><strong>Специалист:</strong> <span class="pac" id="specialistSpecialty">Специальность
+                        специалиста</span></p>
+
+                <form id="appointmentForm">
+
+                    <div class="form-group">
+                        <label for="date">Дата:</label>
+                        <input type="date" id="date" name="date">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="time">Время:</label>
+                        <input type="time" id="time" name="time">
+                    </div>
+
+                    <button class="formb" type="submit" id="createAppointmentButton">Создать талон</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+
+    <script src="../../pages/myPatientPage/script.js"></script>
+    <script src="../../pages/myPatientPage/myProfiledd.js"></script>
+
+</body>

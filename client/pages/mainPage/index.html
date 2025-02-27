@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../pages/mainPage/index.css" type="text/css">
+
+</head>
+
+<body>
+    <div id="notification-container" style="position: fixed; top: 20px; right: 20px; z-index: 1000;"></div>
+    <div class="overlay1" id="overlay1" style="display: none;">
+        <div id="confirmation-modal1" class="modal1">
+            <div class="modal-content1">
+                <p></p>
+                <div class="button-container1">
+                    <button class="buttonnot" id="confirmAuth">Авторизоваться</button>
+                    <button class="buttonnot" id="cancelAuth">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="full-width-container d-flex justify-content-between align-items-center" id="main">
+        <div class="work-time">
+            <i class="fa-solid fa-clock icon"></i>
+            <span class="label">Режим работы:</span>
+            <span class="time">с 7:00 до 22:00</span>
+        </div>
+        <div class="adress">
+            <i class="fa-solid fa-location-dot location-icon"></i>
+            <span class="label">Адрес:</span>
+            <span class="location">Минск, ул. Уличная 12</span>
+        </div>
+    </div>
+
+    <div class="rounded-container">
+        <div class="clinic-name">Городская<br> поликлиника №16</div>
+
+        <div class="phone-numbers">
+
+
+
+            <i class="fa-solid fa-phone-volume phone-icon"></i>
+
+
+            <div>
+                <span>+375 (29) 111-11-11</span><br>
+                <span>+375 (44) 111-11-11</span>
+            </div>
+        </div>
+        <div class="links">
+            <a href="#main">Главная</a>
+            <a href="#about">О нас</a>
+            <a href="#otdel">Отделения</a>
+            <a href="" id="loginBtn">Авторизация</a>
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <div class="image-container">
+
+        <img src="../../pages/mainPage/img/DoctorMain.jpg" alt="Doctor" class="doctor-image">
+        <div class="rectangle">
+            <div class="title">Оформить онлайн запись</div>
+            <div class="keywords">
+
+                <span>Быстро</span>
+                <span class="dot">•</span>
+                <span>Удобно</span>
+                <span class="dot">•</span>
+                <span>Доступно</span>
+
+
+            </div>
+            <a href="#" class="arrow">
+                <img src="../../pages/mainPage/img/arrow.svg" id="talonarrow" alt="Arrow">
+
+            </a>
+        </div>
+        <p class="info-text">Для нас важно, чтобы каждый пациент получил высококвалифицированную помощь наших
+            специалистов, а также сервис на уровне европейских стандартов</p>
+
+        <p class="center-text-container">
+            <span class="text-main">РАБОТАЕМ С</span><br>
+            <span class="text-year">20</span><br>
+            <span class="text-year">05</span><br>
+            <span class="text-main">ГОДА</span>
+        </p>
+    </div>
+
+    <div class="card-container">
+        <div class="card-year-container">
+            <div class="card1">
+                <i class="fa-solid fa-staff-snake snake-icon"></i>
+                <h1>20 ЛЕТ</h1>
+                <p>БЕЗУПРЕЧНОЙ <br>РЕПУТАЦИИ</p>
+            </div>
+        </div>
+
+        <div class="card-satisfaction-container">
+            <div class="card2">
+                <i class="fa-solid fa-thumbs-up like-icon"></i>
+                <h1>97 %</h1>
+                <p>ПОЛОЖИТЕЛЬНЫХ <br>РЕКОМЕНДАЦИЙ</p>
+            </div>
+        </div>
+
+        <div class="card-replay-container">
+            <div class="card3">
+                <i class="fa-solid fa-user-doctor doc-icon"></i>
+                <h1>300+</h1>
+                <p>ВЫСОКОКЛАССНЫХ<br> ВРАЧЕЙ</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-container">
+        <div class="left-part-container">
+            <div class="clock-icon1">
+                <i class="fa-solid fa-clock"></i>
+            </div>
+            <div class="text1">
+                ГРАФИК <br>РАБОТЫ
+            </div>
+            <div class="info-row">
+                <p>Ежедневно</p>
+                <p class="value">с 7:00 до 22:00</p>
+            </div>
+            <hr />
+            <div class="info-row">
+                <p>Вызов врача на дом</p>
+                <p class="value">с 7:30 до 19:30</p>
+            </div>
+            <hr />
+            <div class="info-row">
+                <p>В официальные праздничные дни</p>
+                <p class="value">с 8:00 до 19:00</p>
+            </div>
+        </div>
+        <div class="divider"></div>
+
+        <div class="right-part-container">
+
+            <div class="phone-icon1">
+                <i class="fa-solid fa-phone-volume"></i>
+            </div>
+            <div class="text2">
+                НАШИ <br>КОНТАКТЫ
+            </div>
+            <div class="info-row">
+                <p>Администрация</p>
+                <p class="value">+375 (17) 123-23-66</p>
+            </div>
+            <hr />
+            <div class="info-row">
+                <p>Вызов врача на дом</p>
+                <p class="value">+375 (17) 457-77-70</p>
+            </div>
+            <hr />
+            <div class="info-row">
+                <p>Почта информационного центра</p>
+                <p class="value">16gp@cu.bc.by</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="otdel-container" id="otdel">
+
+        <h1>ОТДЕЛЕНИЯ</h1>
+
+        <div class="department" onclick="toggleInfo(this)">
+
+            <div class="verh">
+                <span class="number">01</span><span> ХИРУРГИЯ</span>
+            </div>
+            <div class="department-content">
+                <div class="department-info">
+                    <p>Проводим плановые и экстренные операции. Наша команда опытных хирургов специализируется на
+                        абдоминальной, ортопедической и травматологической хирургии, обеспечивая высокое качество
+                        медицинской помощи</p>
+
+
+                </div>
+
+                <img src="../../pages/mainPage/img/hirurg.jpg" class="dep-image" alt="Хирургия">
+            </div>
+
+        </div>
+
+        <div class="department" onclick="toggleInfo(this)">
+            <div class="verh">
+                <span class="number">02 </span><span>ОНКОЛОГИЯ</span>
+            </div>
+            <div class="department-content">
+                <div class="department-info">
+                    <p>Оказываем всестороннюю помощь пациентам с онкологическими заболеваниями. Предоставляем услуги
+                        диагностики, химиотерапии и паллиативной помощи. Работают квалифицированные онкологи и
+                        медицинские
+                        сестры, обученные в области онкологии
+
+                    </p>
+
+                </div>
+                <img src="../../pages/mainPage/img/onko.jpg" class="dep-image" alt="Онкология">
+            </div>
+
+        </div>
+
+        <div class="department" onclick="toggleInfo(this)">
+            <div class="verh">
+                <span class="number">03</span> <span>НЕВРОЛОГИЯ</span>
+            </div>
+            <div class="department-content">
+                <div class="department-info">
+                    <p>Специализируемся на диагностике и лечении заболеваний нервной системы, таких как инсульты,
+                        мигрени и
+                        расстройства памяти. Проводим комплексные обследования и разрабатываем индивидуальные планы
+                        лечения
+                    </p>
+
+                </div>
+                <img src="../../pages/mainPage/img/nevrolog.jpg" class="dep-image" alt="Неврология">
+            </div>
+
+        </div>
+
+        <div class="department" onclick="toggleInfo(this)">
+            <div class="verh">
+                <span class="number">04</span> <span>ОФТАЛЬМОЛОГИЯ</span>
+            </div>
+            <div class="department-content">
+                <div class="department-info">
+                    <p>Предлагаем диагностику и лечение заболеваний глаз, включая катаракту, глаукому и возрастные
+                        изменения
+                        зрения. Офтальмологи проводят обследования, включая компьютерную периметрию и лазерные
+                        операции
+                    </p>
+
+                </div>
+                <img src="../../pages/mainPage/img/oftal.jpg" class="dep-image" alt="Офтальмология">
+            </div>
+
+        </div>
+
+        <div class="department" onclick="toggleInfo(this)">
+            <div class="verh">
+                <span class="number">05</span><span> ОТОЛАРИНГОЛОГИЯ</span>
+            </div>
+            <div class="department-content">
+                <div class="department-info">
+                    <p>Обеспечиваем диагностику и лечение заболеваний ушей, горла и носа. Проводим операции по
+                        удалению
+                        миндалин, коррекции носовой перегородки и лечение хронических заболеваний ЛОР-органов</p>
+
+                </div>
+                <img src="../../pages/mainPage/img/lor.jpg" class="dep-image" alt="Отоларингология">
+            </div>
+
+        </div>
+
+        <div class="department" onclick="toggleInfo(this)">
+            <div class="verh">
+                <span class="number">06</span> <span>ФИЗИОТЕРАПИЯ</span>
+            </div>
+            <div class="department-content">
+                <div class="department-info">
+                    <p>Используем современные физиотерапевтические методы для восстановления здоровья после травм и
+                        операций. Включает процедуры ультразвука, электростимуляции и лечебной физкультуры</p>
+
+                </div>
+                <img src="../../pages/mainPage/img/fizt.jpg" class="dep-image" alt="Физиотерапия">
+            </div>
+
+        </div>
+
+        <div class="department" onclick="toggleInfo(this)">
+            <div class="verh">
+                <span class="number">07</span> <span>ЭНДОКРИНОЛОГИЯ</span>
+            </div>
+            <div class="department-content">
+                <div class="department-info">
+                    <p>Предоставляем диагностику и лечение заболеваний эндокринной системы, таких как диабет и
+                        заболевания
+                        щитовидной железы. Проводим мониторинг уровня гормонов и индивидуальное сопровождение
+                        пациентов
+                    </p>
+
+                </div>
+                <img src="../../pages/mainPage/img/endkr.jpg" class="dep-image" alt="Эндокринология">
+            </div>
+
+        </div>
+
+        <div class="department" onclick="toggleInfo(this)">
+            <div class="verh">
+                <span class="number">08</span> <span> КАРДИОЛОГИЯ</span>
+            </div>
+            <div class="department-content">
+                <div class="department-info">
+                    <p>Специализируемся на диагностике и терапии сердечно-сосудистых заболеваний. Проводим ЭКГ,
+                        эхокардиографию и назначаем лечение для профилактики сердечно-сосудистых осложнений</p>
+
+                </div>
+                <img src="../../pages/mainPage/img/kardio.jpg" class="dep-image" alt="Кардиология">
+            </div>
+
+        </div>
+
+        <div class="department-cons" onclick="toggleInfo(this)">
+            <div class="verh">
+                <span class="number">09</span> <span>МУЖСКОЕ/ЖЕНСКОЕ<br> ЗДОРОВЬЕ</span>
+            </div>
+            <div class="department-content">
+                <div class="department-info">
+                    <p>Оказываем услуги по планированию семьи, беременности и гинекологическим заболеваниям.
+                        Проводим
+                        профилактические осмотры и консультации по вопросам репродуктивного здоровья</p>
+                </div>
+                <img src="../../pages/mainPage/img/mfh.jpg" class="dep-image1" alt="М/Ж здоровье">
+            </div>
+
+        </div>
+
+        <div class="department" onclick="toggleInfo(this)">
+            <div class="verh">
+                <span class="number">10</span> <span>СПЕЦИАЛИСТЫ</span>
+            </div>
+            <div class="department-content">
+                <div class="department-info">
+                    <p>В данном отделении работают врачи разных специальностей (дерматолог, аллерголог, ревматолог),
+                        предоставляющие консультации и помощь в
+                        сложных медицинских случаях. Мы обеспечиваем междисциплинарный подход к диагностике и
+                        лечению
+                    </p>
+
+                </div>
+                <img src="../../pages/mainPage/img/spec.jpg" class="dep-image" alt="Специалисты">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="about-container" id="about">
+        <img src="../../pages/mainPage/img/about-doc.png" alt="Doctor-Main" class="doc-main-image">
+        <h1>О НАС</h1>
+        <p class="ab1">Поликлиника была основана в <p1>2005</p1> году и с тех пор зарекомендовала себя как
+            надежное
+            медицинское
+            учреждение.
+            За годы работы мы расширили спектр услуг и внедрили новейшие технологии в области медицины.</p>
+
+        <p class="ab2">Наши врачи и медицинские работники — это <p1>высококвалифицированные специалисты с
+                большим опытом
+                работы</p1>. Мы
+            гордимся тем, что у нас работают профессионалы в различных областях медицины, включая терапию,
+            педиатрию,
+            хирургию и другие.</p>
+
+        <p class="ab3">Мы ценим каждого пациента и стремимся создать комфортные условия для обращения за
+            медицинской
+            помощью. Наша
+            цель — обеспечить <p1>индивидуальный подход</p1> и <p1>внимательное отношение к каждому</p1>.</p>
+
+        <p class="ab4">Поликлиника расположена по адресу: <p1>Минск, ул. Уличная 12</p1>. Вы можете записаться
+            на прием
+            по
+            телефону или через
+            наш <p1>онлайн-сервис</p1>.
+        </p>
+        <h1>НАШИ ЛУЧШИЕ СПЕЦИАЛИСТЫ</h1>
+        <div class="carousel">
+            <div class="spec1-container">
+                <i class="fa-solid fa-medal medal-icon1"></i>
+                <div class="staj1">
+                    <span class="years">25<br></span>
+                    лет<br>
+                    стажа
+                </div>
+                <div class="who1">
+                    <span class="surname">ИВАНОВА<br></span>
+                    Галина<br>
+                    Петровна<br>
+                    <span class="prof">онколог, зав.отд</span>
+                </div>
+
+                <img src="../../pages/mainPage/img/IvanovaGP.jpeg" class="IvanovaGP-image">
+            </div>
+            <div class="spec2-container">
+                <i class="fa-solid fa-medal medal-icon2"></i>
+                <div class="staj2">
+                    <span class="years">30<br></span>
+                    лет<br>
+                    стажа
+                </div>
+                <div class="who2">
+                    <span class="surname">КУЛИК<br></span>
+                    Ирина<br>
+                    Николаевна<br>
+                    <span class="prof">окулист, зав.отд</span>
+                </div>
+                <img src="../../pages/mainPage/img/KulikIN.jpeg" class="KulikIN-image">
+            </div>
+            <div class="spec3-container">
+                <i class="fa-solid fa-medal medal-icon3"></i>
+                <div class="staj3">
+                    <span class="years">30<br></span>
+                    лет<br>
+                    стажа
+                </div>
+                <div class="who3">
+                    <span class="surname"> ЯРМАК<br> </span>
+                    Софья<br>
+                    Георгиевна<br>
+                    <span class="prof">лор, зав.отд</span>
+                </div>
+                <img src="../../pages/mainPage/img/YarmakSG.jpeg" class="YarmakSG-image">
+            </div>
+            <div class="spec4-container">
+                <i class="fa-solid fa-medal medal-icon4"></i>
+                <div class="staj4">
+                    <span class="years">39<br></span>
+                    лет<br>
+                    стажа
+                </div>
+                <div class="who4">
+                    <span class="surname"> ХАТА<br> </span>
+                    Егор<br>
+                    Денисович<br>
+                    <span class="prof">ревматолог</span>
+                </div>
+                <img src="../../pages/mainPage/img/KhataED.jpeg" class="KhataED-image">
+            </div>
+            <div class="spec5-container">
+                <i class="fa-solid fa-medal medal-icon5"></i>
+                <div class="staj5">
+                    <span class="years">25<br></span>
+                    лет<br>
+                    стажа
+                </div>
+                <div class="who5">
+                    <span class="surname">КАЛИНКИН<br> </span>
+                    Анатолий<br>
+                    Викторович<br>
+                    <span class="prof">хирург</span>
+                </div>
+                <img src="../../pages/mainPage/img/KalinkinAV.jpeg" class="KalinkinAV-image">
+            </div>
+            <div class="spec6-container">
+                <i class="fa-solid fa-medal medal-icon6"></i>
+                <div class="staj6">
+                    <span class="years">10<br></span>
+                    лет<br>
+                    стажа
+                </div>
+                <div class="who6">
+                    <span class="surname"> БУДЕЙКО<br></span>
+                    Андрей<br>
+                    Александрович<br>
+                    <span class="prof">кардиолог</span>
+                </div>
+                <img src="../../pages/mainPage/img/BudejkoAA.jpeg" class="BudejkoAA-image">
+            </div>
+        </div>
+        <div class="arrow-container">
+
+            <i class="fa-solid fa-arrow-left left-arrow-icon"></i>
+            <i class="fa-solid fa-arrow-right right-arrow-icon"></i>
+        </div>
+    </div>
+
+    <div class="footer-container">
+        <div class="lmc-cintainer">
+            <div class="loc-container">
+                <i class="fa-solid fa-location-dot loc-icon"></i>
+                <p>220004</p>
+                <p>г.Минск, ул.Уличная 12 </p>
+            </div>
+            <div class="mail-container">
+                <i class="fa-solid fa-envelope mail-icon"></i>
+                <p>16gp@cu.bc.by</p>
+                <p>Мы всегда на связи!</p>
+            </div>
+            <div class="call-container">
+                <i class="fa-solid fa-phone call-icon"></i>
+                <p>+375 (17) 229-90-90</p>
+                <p>Всегда рады вашим звонкам!</p>
+            </div>
+        </div>
+        <i class="fa-solid fa-heart-pulse heart-icon"></i>
+        <h1>будьте здоровы!</h1>
+        <a href="#main" class="up">
+            Наверх
+            <i class="fa-solid fa-angle-up"></i>
+        </a>
+
+
+
+        <div class="overlay" id="overlay">
+            <div class="modal" id="modal">
+                <i class="fa-solid fa-xmark close-icon" id="closeBtn"></i>
+                <span class="back" id="backBtn" style="display: none;"> ◄ Назад </span>
+                <span class="whovhod" id="whovhodid">Войти как:</span>
+                <div class="role-buttons">
+                    <button id="patientBtn" class="role-btn active">Пациент</button>
+                    <button id="specialistBtn" class="role-btn">Специалист</button>
+                    <button id="adminBtn" class="role-btn">Админ</button>
+                </div>
+                <form id="authForm">
+                    <div class="form-group" id="emailGroup">
+                        <label for="email">Почта</label>
+                        <input type="email" id="email" placeholder="Введите почту">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Пароль</label>
+                        <input type="password" id="password" placeholder="Введите пароль" required>
+                        <i class="fa-solid fa-eye " id="togglePassword" role="button"></i>
+                        <a href="#" class="fogpass" style="display: none;" id="fogpass">Забыли пароль?</a>
+                    </div>
+                    <div class="form-group" id="registerLink">
+                        <span>Нет учетной записи? <a href="#" id="registerToggle">Зарегистрироваться</a></span>
+                    </div>
+                    <button class="enter" type="submit">Войти</button>
+                </form>
+
+                <div id="resetPassword" style="display: none;">
+                    <span class="whovhod1" id="whovhodid1">Восстановление пароля</span>
+                    <span class="pocht">Укажите почту, к которой привязан ваш аккаунт, и получите
+                        письмо-напоминание</span>
+                    <div class="form-group1">
+                        <input type="email" id="resetEmail" placeholder="Введите почту" required>
+                    </div>
+                    <button class="pochtb" type="submit">Получить</button>
+                    <span class="mess" style="display: none;"></span>
+                    <span class="back" id="backButton" style="display: none;"> ◄ Назад </span>
+                    <i class="fa-solid fa-xmark close-icon" id="closeButton"></i>
+                </div>
+
+                <form id="registerForm" class="register">
+
+                    <div class="form-group">
+                        <label for="surname">Фамилия</label>
+                        <input type="text" id="surname" placeholder="Введите фамилию" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="firstname">Имя</label>
+                        <input type="text" id="firstname" placeholder="Введите имя" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastname">Отчество</label>
+                        <input type="text" id="lastname" placeholder="Введите отчество" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Пол</label>
+                        <select id="gender">
+                            <option value="M">М</option>
+                            <option value="F">Ж</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Дата рождения</label>
+                        <input type="date" id="dob" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" placeholder="Введите телефон" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Адрес</label>
+                        <input type="text" id="address" placeholder="Введите адрес">
+                    </div>
+                    <div class="form-group">
+                        <label for="regEmail">Почта</label>
+                        <input type="email" id="regEmail" placeholder="Введите почту" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword">Пароль (10 символов)</label>
+                        <input type="password" id="regPassword" maxlength="10" placeholder="Введите пароль" required>
+                        <i class="fa-solid fa-eye-slash " id="toggleRegPassword" role="button"></i>
+
+                    </div>
+                    <button class="enter" type="submit">Зарегистрироваться</button>
+                </form>
+            </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+            </script>
+
+        <script src="../../pages/mainPage/script.js"></script>
+        <script src="../../pages/mainPage/arrow-move.js"></script>
+        <script src="../../pages/mainPage/script-carousel.js"></script>
+        <script src="../../pages/mainPage/script-worktime-contactinfo.js"></script>
+        <script src="../../pages/mainPage/spisok-otdel.js"></script>
+        <script src="../../pages/mainPage/auth.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,685 @@
+:root {
+    --background-color: #fff;
+    --lightblue-color: #4FDFDF;
+    --darkblue-color: #09243C;
+    --lightgrey-color: #E6EAEB;
+    --greyblue-color: #5B6C7B;
+
+}
+
+
+body {
+    position: relative;
+
+    user-select: none;
+}
+
+
+
+html,
+.full-width-container {
+    width: 100%;
+    background-color: none;
+    padding: 10px 20px;
+
+}
+
+.work-time .label,
+.adress .label {
+    color: var(--lightblue-color);
+    font-size: 16px;
+    font-family: 'Manrope';
+    font-weight: 300;
+}
+
+.work-time .time,
+.adress .location {
+    color: var(--darkblue-color);
+    font-size: 18px;
+    font-family: 'Manrope';
+    font-weight: 700;
+}
+
+.work-time .time,
+.adress .location {
+    margin-left: 5px;
+}
+
+.work-time .icon,
+.adress .location-icon,
+.phone-numbers .phone-icon {
+    color: var(--lightblue-color);
+    margin-right: 10px;
+    font-size: 22px;
+}
+
+.phone-icon {
+    animation: none;
+}
+
+.rounded-container {
+    width: 100%;
+    height: 155px;
+
+    background-color: var(--darkblue-color);
+
+    border-radius: 45px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 40px;
+
+    margin-top: 15px;
+    position: relative;
+}
+
+
+.user-icon {
+    font-size: 45px;
+    color: #c5c5c5;
+    position: relative;
+    margin-right: -20px;
+    opacity: 0.5;
+
+
+
+}
+
+.phone-numbers {
+    display: flex;
+
+    align-items: center;
+    margin-left: -15px;
+
+    gap: 5px;
+
+    font-family: 'Manrope';
+    font-weight: 300;
+    font-size: 15px;
+    color: var(--background-color);
+}
+
+.clinic-name {
+    font-size: 40px;
+
+    color: var(--background-color);
+
+    font-family: 'Montserrat';
+    font-weight: 300;
+
+}
+
+.session-user {
+    font-family: 'Manrope';
+    font-weight: 300;
+    position: relative;
+    color: #c5c5c5;
+    text-align: left;
+
+    vertical-align: middle;
+}
+
+.links {
+    font-family: 'Manrope';
+    font-weight: 300;
+    display: flex;
+
+    gap: 30px;
+    text-align: right;
+
+    position: relative;
+    border: none;
+}
+
+
+
+.dropdown-content {
+    max-height: 0;
+
+    overflow: hidden;
+
+    position: absolute;
+
+    background-color: var(--darkblue-color);
+
+
+
+    z-index: 4;
+
+    margin-top: 65px;
+
+    margin-left: 303px;
+
+    width: 150px;
+
+    border-radius: 25px;
+
+    opacity: 0;
+
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+
+    visibility: hidden;
+
+    border: none !important;
+}
+
+.dropdown-content.show {
+    max-height: 300px;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    border: none !important;
+}
+
+.dropdown-content a {
+    display: block;
+
+    padding: 5px;
+
+    color: #000;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    color: #fff;
+    font-family: 'Montserrat';
+    text-align: center;
+    border: none !important;
+}
+
+.dropdown-content a:hover {
+    text-decoration: underline;
+    border: none !important;
+    color: #4FDFDF;
+}
+
+.links a {
+    display: block;
+
+    color: var(--background-color);
+
+    text-decoration: none;
+
+    margin: 2px 0;
+
+    text-decoration: none;
+
+    padding: 10px 10px;
+
+    border-radius: 250px;
+
+    border: 2px solid transparent;
+
+    transition: border-color 0.3s;
+
+}
+
+.links a:hover,
+.links a.active {
+    border-color: var(--lightblue-color);
+}
+
+.footer-container {
+    background: var(--darkblue-color);
+
+    height: 300px;
+    width: 1204px;
+
+    bottom: 0;
+
+    margin-left: -20px;
+
+
+
+    margin-top: 25px;
+
+}
+
+.footer-container h1 {
+    position: absolute;
+    font-size: 20px;
+    font-family: 'Montserrat';
+    color: var(--lightgrey-color);
+    margin-left: 495px;
+    margin-top: 260px;
+    font-weight: 200;
+
+}
+
+.heart-icon {
+    position: absolute;
+    font-size: 30px;
+
+    color: var(--lightblue-color);
+    margin-left: 565px;
+    margin-top: 220px;
+
+}
+
+.up {
+    position: absolute;
+    font-size: 14px;
+    font-family: 'Montserrat';
+    color: var(--lightblue-color);
+    margin-left: 1100px;
+    margin-top: 265px;
+    font-weight: 400;
+    transition: color 0.2s ease;
+    text-decoration: none;
+
+}
+
+.up:hover {
+    color: #fff;
+}
+
+.loc-container {
+
+    justify-content: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--lightgrey-color);
+    text-align: center;
+    min-width: 0;
+}
+
+.loc-icon {
+    font-size: 40px;
+    color: var(--lightgrey-color);
+
+    margin-bottom: 10px;
+
+}
+
+.loc-container p {
+    margin: -2px 0;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-size: 16px;
+
+
+}
+
+.mail-container {
+
+    justify-content: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--lightgrey-color);
+    text-align: center;
+    min-width: 0;
+}
+
+.mail-icon {
+    font-size: 40px;
+    color: var(--lightgrey-color);
+
+    margin-bottom: 10px;
+
+}
+
+.mail-container p {
+    margin: -2px 0;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-size: 16px;
+
+
+}
+
+.call-container {
+
+    justify-content: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--lightgrey-color);
+    text-align: center;
+    min-width: 0;
+}
+
+.call-icon {
+    font-size: 40px;
+    color: var(--lightgrey-color);
+
+    margin-bottom: 10px;
+
+}
+
+.call-container p {
+    margin: -2px 0;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-size: 16px;
+
+
+}
+
+.lmc-cintainer {
+    margin: auto;
+    gap: 220px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+    position: absolute;
+    margin-left: 90px;
+
+}
+
+
+
+
+
+
+.notification {
+    opacity: 1;
+    position: relative;
+    animation: slide-in 0.5s forwards;
+    background-color: var(--lightblue-color);
+    color: #09243C;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 45px;
+    transition: opacity 0.5s ease;
+    font-family: 'Montserrat';
+
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+
+}
+
+.modal-content {
+    animation: slide-in 0.5s forwards;
+    background-color: var(--darkblue-color);
+    color: #ffffff;
+    padding: 30px;
+    margin-bottom: 10px;
+    border-radius: 45px;
+    transition: opacity 0.5s ease;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 500;
+    z-index: 1000;
+    width: 400px;
+    height: 200px;
+    border: 2px solid #fff;
+}
+
+.buttonnot {
+    border: 2px solid #4FDFDF;
+
+    border-radius: 45px;
+    padding: 10px;
+    width: 100px;
+    background-color: transparent;
+
+    color: #ffffff;
+
+    font-family: 'Montserrat';
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    transition: background-color 0.3s ease;
+
+}
+
+.button-container {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 70px;
+
+    margin-top: 20px;
+
+}
+
+.buttonnot:hover {
+    background-color: #4FDFDF;
+
+
+}
+
+
+.talon-container {
+    margin-top: 20px;
+
+    margin-left: 90px;
+    position: relative;
+
+    width: 1000px;
+
+    height: auto;
+
+
+    border-radius: 45px;
+
+    background-color: rgba(179, 179, 179, 0.4);
+
+
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    padding-top: 25px;
+    padding-bottom: 60px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.talon-container h1 {
+    font-family: 'Montserrat';
+    font-size: 50px;
+    font-weight: 700;
+    color: #09243C;
+    position: relative;
+
+}
+
+.talon-container p1 {
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 300;
+    color: #09243C;
+    margin-top: 20px;
+    margin-left: 60px;
+    position: relative;
+
+}
+
+
+
+.note-icon {
+    position: absolute;
+    font-size: 50px;
+    color: #09243C;
+
+    margin-left: 480px;
+}
+
+.onetalon-container {
+    background-color: #ffffff;
+    height: 250px;
+    width: 880px;
+    position: relative;
+    border-radius: 45px;
+    margin-top: 40px;
+    padding: 30px;
+    overflow: hidden;
+
+}
+
+
+
+
+.talon-infoid {
+    font-size: 25px;
+    font-weight: 400;
+    font-family: 'Montserrat';
+    display: flex;
+
+    flex-direction: row;
+
+    gap: 10px;
+
+    align-items: center;
+
+    color: #5B6C7B;
+
+
+}
+
+.talon-infoid .idtalona {
+    font-weight: 900;
+    font-family: 'Manrope';
+    color: #4FDFDF;
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+
+.talon-when {
+    display: flex;
+    flex-direction: row;
+
+    gap: 20px;
+
+    align-items: center;
+    font-size: 25px;
+    font-weight: 400;
+    font-family: 'Montserrat';
+    color: #09243C
+}
+
+.doctor {
+    display: flex;
+    flex-direction: row;
+
+    gap: 10px;
+
+    align-items: center;
+    font-size: 25px;
+    font-weight: 400;
+    font-family: 'Montserrat';
+    color: #09243C
+}
+
+.speciality {
+    position: absolute;
+    font-weight: 600;
+    font-size: 25px;
+    font-family: 'Montserrat';
+    color: #4FDFDF;
+    margin-bottom: 70px;
+}
+
+.fio {
+
+    font-weight: 400;
+    font-size: 25px;
+    font-family: 'Montserrat';
+    color: #09243C;
+    margin-top: 20px;
+}
+
+.cabinet-info {
+    position: absolute;
+    font-weight: 400;
+    font-size: 25px;
+    font-family: 'Montserrat';
+    color: #09243C;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+
+    align-items: center;
+
+}
+
+.cabinet {
+    margin-bottom: 0px;
+    font-weight: 600;
+}
+
+.downloadtalon {
+    position: absolute;
+    border-radius: 15px;
+    border: none;
+    background-color: #5B6C7B;
+    color: #fff;
+    font-family: 'Montserrat';
+    font-size: 15px;
+    padding: 10px;
+    margin-top: -170px;
+    margin-left: 673px;
+    transition: background-color 0.3s;
+}
+
+.downloadtalon:hover {
+    background-color: #4FDFDF;
+
+
+}
+
+.deletetalon {
+    position: absolute;
+    border-radius: 15px;
+    border: none;
+    background-color: #5B6C7B;
+    color: #fff;
+    font-family: 'Montserrat';
+    font-size: 12px;
+    padding: 10px;
+    margin-top: -90px;
+    margin-left: 710px;
+    transition: background-color 0.3s;
+}
+
+.deletetalon:hover {
+    background-color: #ff0000;
+
+
+}

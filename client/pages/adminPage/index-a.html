@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Администратор</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.13.18/jquery.timepicker.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.13.18/jquery.timepicker.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../pages/adminPage/index-a.css">
+</head>
+
+<body>
+    <div id="notification-container" style="position: fixed; top: 20px; right: 20px; z-index: 1000;"></div>
+    <div id="createspecmodal" class="modal" style="display: none;">
+        <div class="modal-content-spec">
+            <i class="fa-solid fa-xmark close"></i>
+            <h2>Добавить специалиста</h2>
+            <div class="patient-fio">
+                <input type="text" id="surname" placeholder="Фамилия" />
+                <input type="text" id="name" placeholder="Имя" />
+                <input type="text" id="secondname" placeholder="Отчество" />
+                <input type="text" id="password" placeholder="Пароль" />
+            </div>
+            <div class="row1">
+                <input type="date" id="birthdate" style="width: 90px;" />
+                <input type="text" id="phonenumber" placeholder="Телефон" style="width: 110px;" />
+                <input type="text" id="adress" placeholder="Адрес" style="width: 150px;" />
+            </div>
+            <div class="row-department">
+                <label for="departmentSelect">Отделение:</label>
+                <select id="departmentSelect">
+                    <option value="">Выберите отделение</option>
+                </select>
+            </div>
+            <div class="row50">
+                <input type="text" id="speciality" placeholder="Специальность" style="width: 130px;" />
+                <input type="text" id="cabinet" placeholder="Кабинет" style="width: 70px; margin-top: 10px;" />
+            </div>
+            <div class="row5-add">
+                <div class="dni">Рабочие дни:</div>
+                <div class="weekdays-checkboxes">
+                </div>
+            </div>
+            <div class="row6-add">
+                <div class="timerab">Время работы:</div>
+                <div>
+                    <label>Начало: <input type="text" id="starttime" class="starttime" style="width: 70px;" /></label>
+                    <label>Конец: <input class="endtime" type="text" id="endtime" style="width: 70px;" /></label>
+                </div>
+            </div>
+            <button id="saveSpec">Сохранить</button>
+            <button id="cancelSpec">Отмена</button>
+        </div>
+    </div>
+    <div class="overlay" id="modalOverlay" style="display: none;"></div>
+    <div id="confirmation-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <p>Вы уверены, что хотите удалить этот талон?</p>
+            <div class="button-container">
+                <button class="buttonnot" id="confirmDelete">Да</button>
+                <button class="buttonnot" id="cancelDelete">Отмена</button>
+            </div>
+        </div>
+    </div>
+    <div class="admin-round-container">
+        <div class="row-container" id="row-container">
+            <i class="fa-regular fa-user admin-icon"></i>
+            <p class="admin-name" id="admin-name">Админ</p>
+        </div>
+        <div class="links-container">
+            <a href="#" id="logoutBtn">ВЫЙТИ</a>
+        </div>
+    </div>
+    <div class="grid-container">
+        <div class="spec-container-b">
+            <i class="fa-solid fa-user-nurse icon-in-user"></i>
+            <div class="name-name">СПЕЦИАЛИСТЫ</div>
+        </div>
+        <div class="pac-container-b">
+            <i class="fa-solid fa-user icon-in-user"></i>
+            <div class="name-name">ПАЦИЕНТЫ</div>
+        </div>
+        <div class="talon-container-b">
+            <i class="fa-regular fa-paste icon-in"></i>
+            <div class="name-name">ТАЛОНЫ</div>
+        </div>
+        <div class="dep-container-b">
+            <i class="fa-solid fa-house-medical icon-in"></i>
+            <div class="name-name">ОТДЕЛЕНИЯ</div>
+        </div>
+    </div>
+    <div class="vivod-container" id="vivod-container" style="display: none;">
+        <i class="fa-solid fa-arrow-left back-icon" id="bb"></i>
+        <i class="fa-solid fa-arrow-left back-icon" id="bb1"></i>
+        <div class="what">СПЕЦИАЛИСТЫ </div>
+        <i class="fa-solid fa-arrow-up-a-z sortl" id="sortByName" style="display: none;"></i>
+        <i class="fa-solid fa-arrow-up-1-9 sortn" id="sortAlphabet" style="display: none;"></i>
+        <i class="fa-solid fa-arrow-up-a-z sortl" id="sortByName1" style="display: none;"></i>
+        <i class="fa-solid fa-arrow-up-1-9 sortn" id="sortAlphabet1" style="display: none;"></i>
+        <i class="fa-solid fa-user-plus addspec" id="addspec" style="display: none;"></i>
+        <div id="patientsContainer" class="patients-container"></div>
+        <div id="talonsList"></div>
+        <div id="talonsList1"></div>
+        <div id="specialistsContainer" class="specialists-container"></div>
+        <div id="scheduleContainer">
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+    <script src="../../pages/adminPage/script.js"></script>
+</body>

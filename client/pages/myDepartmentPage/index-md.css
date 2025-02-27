@@ -1,0 +1,465 @@
+:root {
+    --background-color: #fff;
+    --lightblue-color: #4FDFDF;
+    --darkblue-color: #09243C;
+    --lightgrey-color: #E6EAEB;
+    --greyblue-color: #5B6C7B;
+
+}
+
+body {
+    position: relative;
+
+    user-select: none;
+
+}
+
+
+
+html,
+.full-width-container {
+    width: 100%;
+    background-color: none;
+    padding: 10px 20px;
+}
+
+.work-time .label,
+.adress .label {
+    color: var(--lightblue-color);
+    font-size: 16px;
+    font-family: 'Manrope';
+    font-weight: 300;
+}
+
+.work-time .time,
+.adress .location {
+    color: var(--darkblue-color);
+    font-size: 18px;
+    font-family: 'Manrope';
+    font-weight: 700;
+}
+
+.work-time .time,
+.adress .location {
+    margin-left: 5px;
+}
+
+.work-time .icon,
+.adress .location-icon,
+.phone-numbers .phone-icon {
+    color: var(--lightblue-color);
+    margin-right: 10px;
+    font-size: 22px;
+}
+
+.phone-icon {
+    animation: none;
+}
+
+@keyframes tilt {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-15deg);
+    }
+
+
+    50% {
+        transform: rotate(15deg);
+    }
+
+
+    75% {
+        transform: rotate(-15deg);
+    }
+
+
+}
+
+.tilt {
+    animation: tilt 0.5s infinite;
+
+}
+
+
+.rounded-container {
+    width: 100%;
+    height: 155px;
+
+    background-color: var(--darkblue-color);
+
+    border-radius: 45px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 40px;
+
+    margin-top: 15px;
+    position: relative;
+
+}
+
+
+
+.phone-numbers {
+    display: flex;
+
+    align-items: center;
+    margin-left: -15px;
+
+    gap: 5px;
+
+    font-family: 'Manrope';
+    font-weight: 300;
+    font-size: 15px;
+    color: var(--background-color);
+}
+
+.clinic-name {
+    font-size: 40px;
+
+    color: var(--background-color);
+
+    font-family: 'Montserrat';
+    font-weight: 300;
+
+}
+
+.links {
+    font-family: 'Manrope';
+    font-weight: 300;
+    display: flex;
+
+    gap: 20px;
+    text-align: right;
+
+    position: relative;
+    border: none;
+}
+
+
+
+.dropdown-content {
+    max-height: 0;
+
+    overflow: hidden;
+
+    position: absolute;
+
+    background-color: var(--darkblue-color);
+
+
+
+    z-index: 4;
+
+    margin-top: 65px;
+
+    margin-left: -10px;
+
+    width: 150px;
+
+    border-radius: 25px;
+
+    opacity: 0;
+
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+
+    visibility: hidden;
+
+    border: none !important;
+}
+
+.dropdown-content.show {
+    max-height: 300px;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    border: none !important;
+}
+
+.dropdown-content a {
+    display: block;
+
+    padding: 5px;
+
+    color: #000;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    color: #fff;
+    font-family: 'Montserrat';
+    text-align: center;
+    border: none !important;
+}
+
+.dropdown-content a:hover {
+    text-decoration: underline;
+    border: none !important;
+    color: #4FDFDF;
+}
+
+.links a {
+    display: block;
+
+    color: var(--background-color);
+
+    text-decoration: none;
+
+    margin: 2px 0;
+
+    text-decoration: none;
+
+    padding: 10px 10px;
+
+    border-radius: 250px;
+
+    border: 2px solid transparent;
+
+    transition: border-color 0.3s;
+
+}
+
+.links a:hover,
+.links a.active {
+    border-color: var(--lightblue-color);
+}
+
+.notification {
+    opacity: 1;
+    position: relative;
+    animation: slide-in 0.5s forwards;
+    background-color: var(--lightblue-color);
+    color: #09243C;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 45px;
+    transition: opacity 0.5s ease;
+    font-family: 'Montserrat';
+
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.user-icon {
+    font-size: 45px;
+    color: #c5c5c5;
+    position: relative;
+    margin-right: -70px;
+    opacity: 0.5;
+
+
+
+
+}
+
+.session-user {
+    font-family: 'Manrope';
+    font-weight: 300;
+    position: relative;
+    color: #c5c5c5;
+    text-align: left;
+
+    vertical-align: middle;
+}
+
+.graf1-container {
+    margin-top: 20px;
+
+    margin-left: 90px;
+    position: relative;
+
+    width: 1000px;
+
+    height: auto;
+
+
+    border-radius: 45px;
+
+    background-color: rgba(79, 223, 223, 1);
+
+
+
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    padding-top: 25px;
+    padding-bottom: 60px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.graf1-container h1 {
+    font-family: 'Montserrat';
+    font-size: 50px;
+    font-weight: 700;
+    color: #ffffff;
+    position: relative;
+    margin-left: 0px;
+
+}
+
+.graf1-container p1 {
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 300;
+    color: #09243C;
+    margin-top: 20px;
+    margin-left: 60px;
+    position: relative;
+
+}
+
+
+.enlarged {
+    transform: scale(1.05);
+
+    transition: transform 0.5s ease;
+
+}
+
+.graf-container {
+    margin-top: 20px;
+
+    margin-left: 90px;
+    position: relative;
+
+    width: 1000px;
+
+    height: auto;
+
+
+    border-radius: 45px;
+
+    background-color: rgba(179, 179, 179, 0.4);
+
+
+
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    padding-top: 25px;
+    padding-bottom: 60px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.graf-container h1 {
+    font-family: 'Montserrat';
+    font-size: 50px;
+    font-weight: 700;
+    color: #09243C;
+    position: relative;
+    margin-left: 0px;
+
+}
+
+.graf-container p1 {
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 300;
+    color: #09243C;
+    margin-top: 20px;
+    margin-left: 60px;
+    position: relative;
+
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+th {
+
+    padding: 20px;
+
+    text-align: left;
+    text-align: center;
+
+}
+
+td {
+
+    padding: 20px;
+
+    text-align: left;
+
+}
+
+th {
+    background-color: #09243C;
+    font-weight: 600;
+    font-size: 25px;
+    font-family: 'Montserrat';
+    text-align: center;
+    color: #fff;
+
+}
+
+tr {
+    background-color: #ffffff;
+
+}
+
+.highlight {
+    background-color: rgba(255, 255, 255, 0.7);
+
+}
+
+td {
+    font-size: 25px;
+    border: 1px solid #ddd;
+
+    font-family: 'Montserrat';
+    text-align: center;
+
+}
+
+
+td.time {
+    font-family: 'Manrope';
+
+    font-size: 25px;
+    text-align: center;
+
+
+}
